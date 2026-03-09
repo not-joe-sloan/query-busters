@@ -404,7 +404,7 @@ useEffect(() => {
               support page.
             </a>
           </p>
-          <p className="press-space">[Hold Space]</p>
+          <p className="hold-space">[Hold Space]</p>
         </div>
       </>
     );
