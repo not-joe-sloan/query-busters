@@ -1,0 +1,161 @@
+header {
+  width: 100%;
+  height: 48px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 48px);
+  background: #EEF0F3;
+  overflow: hidden;
+  margin-top: 48px;
+}
+
+.player {
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #1890FF;
+  transform: translateX(-50%);
+}
+
+.bullet {
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background: #7899F3;
+}
+
+.blockRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-number {
+  margin-left: 10px;
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #5A5C61;
+}
+
+.error-title {
+  display: flex;
+  align-items: baseline; /* Aligns the baseline of the text */
+  justify-content: center; /* Centers the text horizontally */
+  gap: 0.5rem; /* Adds some space between h1 and h2 */
+  margin-bottom: 1rem; /* Adds some space below the title */
+}
+
+.error-title h1 {
+  font-weight: bold;
+  margin: 0; /* Remove default margins */
+}
+
+.error-title h2 {
+  font-weight: normal;
+  margin: 0; /* Remove default margins */
+}
+
+.enemy {
+  position: absolute;
+  color: white;
+  font-family: monospace;
+  font-size: 1rem;
+  padding: 0 5px;
+  height: 20px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+
+}
+
+.game-over-screen {
+  position: fixed;
+
+  width: 100%; /* Add this */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers vertically */
+  background: #EEF0F3b6;; /* Semi-transparent light blue */
+  z-index: 2;
+
+}
+
+.game-over .enemy {
+  opacity: 0.2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 0rem;
+  color:#000000cd;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+p {
+  font-size: 18px;
+  color: #000000a8;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 200;
+  color:#000000cd;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #EEF0F3;  /* or whatever color you want */
+
+}
+
+.ascii-art {
+  font-size: 16px;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  text-align: left;
+  color: #096DD9;
+  font-family: monospace;
+  font-weight:bold ;
+}
+
+.press-space {
+  font-size: 1rem;
+  font-weight:300 ;
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  animation: blink 1.5s step-start infinite;
+  font-family: monospace;
+  background-color: #135594;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.faded {
+  opacity: 0.3;
+  transition: opacity 0.5s ease-in-out;
+}
