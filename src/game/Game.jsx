@@ -53,7 +53,7 @@ const Game = () => {
   //Timing Constants
   const speed = 8; // Player Speed
   const bulletSpeed = 5;
-  const textSpeed = 1.2;
+  const textSpeed = 1;
   const [velocity, setVelocity] = useState(0); // Player's current velocity
   const lastTimeRef = useRef(0); //Track framerate
   const fireDelay = 100; // Milliseconds between shots
